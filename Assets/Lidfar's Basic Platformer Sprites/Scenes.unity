@@ -211,6 +211,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.1, y: 0.14}
   m_EdgeRadius: 0
+--- !u!114 &9972390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9972388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2476e30a96fbf2841b4564cb65def602, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &19813975
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -653,7 +665,7 @@ Transform:
   - {fileID: 1592141890}
   - {fileID: 1757014716}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &425072807
 PrefabInstance:
@@ -1244,7 +1256,7 @@ Transform:
   - {fileID: 707756190}
   - {fileID: 2018381778}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1138973084
 PrefabInstance:
