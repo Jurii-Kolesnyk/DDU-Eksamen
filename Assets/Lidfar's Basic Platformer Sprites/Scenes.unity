@@ -178,6 +178,50 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2847055088378839878, guid: 5610e7474586ccf4cbe2b21e694cd74d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2847055088378839878, guid: 5610e7474586ccf4cbe2b21e694cd74d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2847055088378839878, guid: 5610e7474586ccf4cbe2b21e694cd74d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2847055088378839878, guid: 5610e7474586ccf4cbe2b21e694cd74d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2847055088378839878, guid: 5610e7474586ccf4cbe2b21e694cd74d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2847055088378839878, guid: 5610e7474586ccf4cbe2b21e694cd74d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2847055088378839878, guid: 5610e7474586ccf4cbe2b21e694cd74d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2847055088378839878, guid: 5610e7474586ccf4cbe2b21e694cd74d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2847055088378839878, guid: 5610e7474586ccf4cbe2b21e694cd74d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2847055088378839878, guid: 5610e7474586ccf4cbe2b21e694cd74d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2847055088378839878, guid: 5610e7474586ccf4cbe2b21e694cd74d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5610e7474586ccf4cbe2b21e694cd74d, type: 3}
 --- !u!1 &9972388 stripped
@@ -257,6 +301,21 @@ SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 212545019231560948, guid: 5610e7474586ccf4cbe2b21e694cd74d, type: 3}
   m_PrefabInstance: {fileID: 9972387}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &9972394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9972388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0633604830fd96408fe8a2a4ea6620a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firePoint: {fileID: 1931191611}
+  bulletPrefab: {fileID: 858173114189535661, guid: 838d9ff7fea60ff46893f783b1daaa8f, type: 3}
+  bulletForce: 20
 --- !u!1001 &19813975
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -267,6 +326,10 @@ PrefabInstance:
     - target: {fileID: 1679317873359498, guid: 6cb30e14ba1e7304c8286a1de59586ef, type: 3}
       propertyPath: m_Name
       value: Nature_22 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1679317873359498, guid: 6cb30e14ba1e7304c8286a1de59586ef, type: 3}
+      propertyPath: m_TagString
+      value: obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 4980578092140226, guid: 6cb30e14ba1e7304c8286a1de59586ef, type: 3}
       propertyPath: m_LocalPosition.x
@@ -329,6 +392,10 @@ PrefabInstance:
     - target: {fileID: 1679317873359498, guid: 6cb30e14ba1e7304c8286a1de59586ef, type: 3}
       propertyPath: m_Name
       value: Nature_22
+      objectReference: {fileID: 0}
+    - target: {fileID: 1679317873359498, guid: 6cb30e14ba1e7304c8286a1de59586ef, type: 3}
+      propertyPath: m_TagString
+      value: obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 4980578092140226, guid: 6cb30e14ba1e7304c8286a1de59586ef, type: 3}
       propertyPath: m_LocalPosition.x
@@ -396,6 +463,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Nature_19 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 1809633128943870, guid: baf9cfef0bfd024418bbbdc4cc282c36, type: 3}
+      propertyPath: m_TagString
+      value: obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4895475038736846, guid: baf9cfef0bfd024418bbbdc4cc282c36, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.885123
@@ -457,6 +528,10 @@ PrefabInstance:
     - target: {fileID: 1679317873359498, guid: 6cb30e14ba1e7304c8286a1de59586ef, type: 3}
       propertyPath: m_Name
       value: Nature_22 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1679317873359498, guid: 6cb30e14ba1e7304c8286a1de59586ef, type: 3}
+      propertyPath: m_TagString
+      value: obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 4980578092140226, guid: 6cb30e14ba1e7304c8286a1de59586ef, type: 3}
       propertyPath: m_LocalPosition.x
@@ -520,6 +595,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Nature_22 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1679317873359498, guid: 6cb30e14ba1e7304c8286a1de59586ef, type: 3}
+      propertyPath: m_TagString
+      value: obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4980578092140226, guid: 6cb30e14ba1e7304c8286a1de59586ef, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.2813964
@@ -582,6 +661,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: People_2
       objectReference: {fileID: 0}
+    - target: {fileID: 1175302804230684, guid: 13a19871bd90a434f9ae495076ae18b5, type: 3}
+      propertyPath: m_TagString
+      value: obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4653868669921542, guid: 13a19871bd90a434f9ae495076ae18b5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.21
@@ -624,6 +707,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4653868669921542, guid: 13a19871bd90a434f9ae495076ae18b5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212608668027056654, guid: 13a19871bd90a434f9ae495076ae18b5, type: 3}
+      propertyPath: m_SortingOrder
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -905,7 +992,7 @@ GameObject:
   - component: {fileID: 400096330}
   m_Layer: 0
   m_Name: UpperGround
-  m_TagString: Untagged
+  m_TagString: obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -946,6 +1033,10 @@ PrefabInstance:
     - target: {fileID: 1679317873359498, guid: 6cb30e14ba1e7304c8286a1de59586ef, type: 3}
       propertyPath: m_Name
       value: Nature_22 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1679317873359498, guid: 6cb30e14ba1e7304c8286a1de59586ef, type: 3}
+      propertyPath: m_TagString
+      value: obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 4980578092140226, guid: 6cb30e14ba1e7304c8286a1de59586ef, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1009,6 +1100,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Nature_19 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 1809633128943870, guid: baf9cfef0bfd024418bbbdc4cc282c36, type: 3}
+      propertyPath: m_TagString
+      value: obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4895475038736846, guid: baf9cfef0bfd024418bbbdc4cc282c36, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.944123
@@ -1071,6 +1166,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Nature_17 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094902140997450, guid: 525aeee4c5aae7d45838f5b275cef30a, type: 3}
+      propertyPath: m_TagString
+      value: obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4774394635563050, guid: 525aeee4c5aae7d45838f5b275cef30a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.246
@@ -1127,6 +1226,10 @@ PrefabInstance:
     - target: {fileID: 1679317873359498, guid: 6cb30e14ba1e7304c8286a1de59586ef, type: 3}
       propertyPath: m_Name
       value: Nature_22 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1679317873359498, guid: 6cb30e14ba1e7304c8286a1de59586ef, type: 3}
+      propertyPath: m_TagString
+      value: obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 4980578092140226, guid: 6cb30e14ba1e7304c8286a1de59586ef, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1190,6 +1293,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Nature_19 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 1809633128943870, guid: baf9cfef0bfd024418bbbdc4cc282c36, type: 3}
+      propertyPath: m_TagString
+      value: obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4895475038736846, guid: baf9cfef0bfd024418bbbdc4cc282c36, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.839877
@@ -1251,6 +1358,10 @@ PrefabInstance:
     - target: {fileID: 1809633128943870, guid: baf9cfef0bfd024418bbbdc4cc282c36, type: 3}
       propertyPath: m_Name
       value: Nature_19 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1809633128943870, guid: baf9cfef0bfd024418bbbdc4cc282c36, type: 3}
+      propertyPath: m_TagString
+      value: obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 4895475038736846, guid: baf9cfef0bfd024418bbbdc4cc282c36, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1314,6 +1425,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Nature_19 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 1809633128943870, guid: baf9cfef0bfd024418bbbdc4cc282c36, type: 3}
+      propertyPath: m_TagString
+      value: obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4895475038736846, guid: baf9cfef0bfd024418bbbdc4cc282c36, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.312877
@@ -1376,6 +1491,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Nature_17 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094902140997450, guid: 525aeee4c5aae7d45838f5b275cef30a, type: 3}
+      propertyPath: m_TagString
+      value: obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4774394635563050, guid: 525aeee4c5aae7d45838f5b275cef30a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.955
@@ -1432,6 +1551,10 @@ PrefabInstance:
     - target: {fileID: 1809633128943870, guid: baf9cfef0bfd024418bbbdc4cc282c36, type: 3}
       propertyPath: m_Name
       value: Nature_19 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1809633128943870, guid: baf9cfef0bfd024418bbbdc4cc282c36, type: 3}
+      propertyPath: m_TagString
+      value: obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 4895475038736846, guid: baf9cfef0bfd024418bbbdc4cc282c36, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1495,7 +1618,7 @@ GameObject:
   - component: {fileID: 1081893722}
   m_Layer: 0
   m_Name: UnderGround
-  m_TagString: Untagged
+  m_TagString: obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1537,6 +1660,10 @@ PrefabInstance:
     - target: {fileID: 1615208912287106, guid: 9a846ce9043e0a8499034f7ad64efd6b, type: 3}
       propertyPath: m_Name
       value: Nature_8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1615208912287106, guid: 9a846ce9043e0a8499034f7ad64efd6b, type: 3}
+      propertyPath: m_TagString
+      value: obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 4878364963955218, guid: 9a846ce9043e0a8499034f7ad64efd6b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1594,6 +1721,10 @@ PrefabInstance:
     - target: {fileID: 1809633128943870, guid: baf9cfef0bfd024418bbbdc4cc282c36, type: 3}
       propertyPath: m_Name
       value: Nature_19 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1809633128943870, guid: baf9cfef0bfd024418bbbdc4cc282c36, type: 3}
+      propertyPath: m_TagString
+      value: obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 4895475038736846, guid: baf9cfef0bfd024418bbbdc4cc282c36, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1657,6 +1788,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Nature_10
       objectReference: {fileID: 0}
+    - target: {fileID: 1360675659161680, guid: 5fecc04defa22474ebd15ea4482ff269, type: 3}
+      propertyPath: m_TagString
+      value: obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4897691250001740, guid: 5fecc04defa22474ebd15ea4482ff269, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.64156055
@@ -1713,6 +1848,10 @@ PrefabInstance:
     - target: {fileID: 1809633128943870, guid: baf9cfef0bfd024418bbbdc4cc282c36, type: 3}
       propertyPath: m_Name
       value: Nature_19 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1809633128943870, guid: baf9cfef0bfd024418bbbdc4cc282c36, type: 3}
+      propertyPath: m_TagString
+      value: obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 4895475038736846, guid: baf9cfef0bfd024418bbbdc4cc282c36, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1776,6 +1915,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Nature_19 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1809633128943870, guid: baf9cfef0bfd024418bbbdc4cc282c36, type: 3}
+      propertyPath: m_TagString
+      value: obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4895475038736846, guid: baf9cfef0bfd024418bbbdc4cc282c36, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.9941231
@@ -1837,6 +1980,10 @@ PrefabInstance:
     - target: {fileID: 1679317873359498, guid: 6cb30e14ba1e7304c8286a1de59586ef, type: 3}
       propertyPath: m_Name
       value: Nature_22 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1679317873359498, guid: 6cb30e14ba1e7304c8286a1de59586ef, type: 3}
+      propertyPath: m_TagString
+      value: obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 4980578092140226, guid: 6cb30e14ba1e7304c8286a1de59586ef, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1900,6 +2047,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Nature_22 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 1679317873359498, guid: 6cb30e14ba1e7304c8286a1de59586ef, type: 3}
+      propertyPath: m_TagString
+      value: obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4980578092140226, guid: 6cb30e14ba1e7304c8286a1de59586ef, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.7386034
@@ -1961,6 +2112,10 @@ PrefabInstance:
     - target: {fileID: 1809633128943870, guid: baf9cfef0bfd024418bbbdc4cc282c36, type: 3}
       propertyPath: m_Name
       value: Nature_19 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1809633128943870, guid: baf9cfef0bfd024418bbbdc4cc282c36, type: 3}
+      propertyPath: m_TagString
+      value: obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 4895475038736846, guid: baf9cfef0bfd024418bbbdc4cc282c36, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2117,6 +2272,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Nature_17
       objectReference: {fileID: 0}
+    - target: {fileID: 1094902140997450, guid: 525aeee4c5aae7d45838f5b275cef30a, type: 3}
+      propertyPath: m_TagString
+      value: obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4774394635563050, guid: 525aeee4c5aae7d45838f5b275cef30a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.513
@@ -2173,6 +2332,10 @@ PrefabInstance:
     - target: {fileID: 1679317873359498, guid: 6cb30e14ba1e7304c8286a1de59586ef, type: 3}
       propertyPath: m_Name
       value: Nature_22 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1679317873359498, guid: 6cb30e14ba1e7304c8286a1de59586ef, type: 3}
+      propertyPath: m_TagString
+      value: obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 4980578092140226, guid: 6cb30e14ba1e7304c8286a1de59586ef, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2318,6 +2481,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Nature_22 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1679317873359498, guid: 6cb30e14ba1e7304c8286a1de59586ef, type: 3}
+      propertyPath: m_TagString
+      value: obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4980578092140226, guid: 6cb30e14ba1e7304c8286a1de59586ef, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.7436035
@@ -2380,6 +2547,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Nature_22 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 1679317873359498, guid: 6cb30e14ba1e7304c8286a1de59586ef, type: 3}
+      propertyPath: m_TagString
+      value: obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4980578092140226, guid: 6cb30e14ba1e7304c8286a1de59586ef, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.2386034
@@ -2431,6 +2602,119 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4980578092140226, guid: 6cb30e14ba1e7304c8286a1de59586ef, type: 3}
   m_PrefabInstance: {fileID: 1883497080}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1931191610 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4115616213925440627, guid: 5610e7474586ccf4cbe2b21e694cd74d, type: 3}
+  m_PrefabInstance: {fileID: 9972387}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1931191611 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2847055088378839878, guid: 5610e7474586ccf4cbe2b21e694cd74d, type: 3}
+  m_PrefabInstance: {fileID: 9972387}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1931191612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1931191610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff9182dfdf221684dbfdb10d74bdb0dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 1931191613}
+--- !u!50 &1931191613
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1931191610}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!212 &1931191614
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1931191610}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 10
+  m_Sprite: {fileID: 21300006, guid: 5cd118107a22a7a4ebdb568a5427bbd2, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.12, y: 0.16}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!255 &1931191615
+FixedJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1931191610}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 9972389}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 1
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0, y: 0}
+  m_DampingRatio: 0
+  m_Frequency: 0
 --- !u!1001 &1945992445
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2441,6 +2725,10 @@ PrefabInstance:
     - target: {fileID: 1809633128943870, guid: baf9cfef0bfd024418bbbdc4cc282c36, type: 3}
       propertyPath: m_Name
       value: Nature_19 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1809633128943870, guid: baf9cfef0bfd024418bbbdc4cc282c36, type: 3}
+      propertyPath: m_TagString
+      value: obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 4895475038736846, guid: baf9cfef0bfd024418bbbdc4cc282c36, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2504,6 +2792,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Nature_19 (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 1809633128943870, guid: baf9cfef0bfd024418bbbdc4cc282c36, type: 3}
+      propertyPath: m_TagString
+      value: obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4895475038736846, guid: baf9cfef0bfd024418bbbdc4cc282c36, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.371877
@@ -2566,6 +2858,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Nature_19 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1809633128943870, guid: baf9cfef0bfd024418bbbdc4cc282c36, type: 3}
+      propertyPath: m_TagString
+      value: obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4895475038736846, guid: baf9cfef0bfd024418bbbdc4cc282c36, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.52112305
@@ -2627,6 +2923,10 @@ PrefabInstance:
     - target: {fileID: 1679317873359498, guid: 6cb30e14ba1e7304c8286a1de59586ef, type: 3}
       propertyPath: m_Name
       value: Nature_22 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1679317873359498, guid: 6cb30e14ba1e7304c8286a1de59586ef, type: 3}
+      propertyPath: m_TagString
+      value: obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 4980578092140226, guid: 6cb30e14ba1e7304c8286a1de59586ef, type: 3}
       propertyPath: m_LocalPosition.x
