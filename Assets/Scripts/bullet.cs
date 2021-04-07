@@ -16,6 +16,13 @@ public class bullet : MonoBehaviour
         if(trigger.gameObject.tag == "obstacle")
         {
         Destroy(gameObject);
-        } 
+        }
+
+        enemy enemy = trigger.GetComponent<enemy>();
+
+        if(enemy != null){
+            enemy.TakeDamage(20);
+            Destroy(gameObject);
+        }
     }
 }
