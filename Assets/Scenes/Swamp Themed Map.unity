@@ -7445,6 +7445,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5598076587194685667, guid: 2c5840a40fe1aef489d6ca74f32a8141, type: 3}
+      propertyPath: sceneId
+      value: 2235941290
+      objectReference: {fileID: 0}
     - target: {fileID: 2365532592850859817, guid: 2c5840a40fe1aef489d6ca74f32a8141, type: 3}
       propertyPath: m_IsTrigger
       value: 0
@@ -7501,7 +7505,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1640456156881979730, guid: 2c5840a40fe1aef489d6ca74f32a8141, type: 3}
+    - {fileID: 868499893943486093, guid: 2c5840a40fe1aef489d6ca74f32a8141, type: 3}
+    - {fileID: -5598076587194685667, guid: 2c5840a40fe1aef489d6ca74f32a8141, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2c5840a40fe1aef489d6ca74f32a8141, type: 3}
 --- !u!1 &2034873534
 GameObject:
