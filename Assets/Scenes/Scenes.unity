@@ -1179,7 +1179,7 @@ MonoBehaviour:
   SendWindowSize: 4096
   ReceiveWindowSize: 4096
   debugLog: 0
-  statisticsGUI: 1
+  statisticsGUI: 0
   statisticsLog: 0
 --- !u!114 &902927370
 MonoBehaviour:
@@ -1190,7 +1190,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 902927368}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb28cbc20f2bfbb49af49e4408784bb2, type: 3}
+  m_Script: {fileID: 11500000, guid: 0aa3018bb284840d6a6d0acee29ab098, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dontDestroyOnLoad: 1
@@ -1204,15 +1204,15 @@ MonoBehaviour:
   onlineScene: 
   transport: {fileID: 902927369}
   networkAddress: localhost
-  maxConnections: 4
+  maxConnections: 2
   disconnectInactiveConnections: 0
   disconnectInactiveTimeout: 60
   authenticator: {fileID: 0}
   playerPrefab: {fileID: 401510023529814393, guid: 3992ef00e40118d498e9feb08432c40b, type: 3}
   autoCreatePlayer: 1
-  playerSpawnMethod: 1
-  spawnPrefabs:
-  - {fileID: 401510023529814393, guid: 3992ef00e40118d498e9feb08432c40b, type: 3}
+  playerSpawnMethod: 0
+  spawnPrefabs: []
+  playerPrefab2: {fileID: 401510023529814393, guid: 08d33b231dfe0d34cbb1cee88334be95, type: 3}
   leftRacketSpawn: {fileID: 2043073608}
   rightRacketSpawn: {fileID: 1598394101}
 --- !u!4 &902927371

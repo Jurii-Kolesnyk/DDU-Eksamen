@@ -6,6 +6,8 @@ public class bullet : MonoBehaviour
 {
     public float speed = 20f;
     public Rigidbody2D rb;
+    public Component player;
+    public Component Enemy;
     void Start()
     {
         rb.velocity = transform.right * speed;
@@ -20,7 +22,7 @@ public class bullet : MonoBehaviour
 
         enemy enemy = trigger.GetComponent<enemy>();
 
-        if(enemy != null){
+        if(enemy != null && player != Enemy){
             enemy.TakeDamage(20);
             Destroy(gameObject);
         }

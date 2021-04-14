@@ -146,3 +146,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   rb: {fileID: 858173114189535662}
+  player: {fileID: 398269197662842115, guid: 3992ef00e40118d498e9feb08432c40b, type: 3}
+  Enemy: {fileID: 6184235952448878781, guid: 2c5840a40fe1aef489d6ca74f32a8141, type: 3}
