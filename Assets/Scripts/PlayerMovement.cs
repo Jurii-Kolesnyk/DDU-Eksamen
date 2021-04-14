@@ -15,16 +15,12 @@ public class PlayerMovement : MonoBehaviour
     public Animator PlayerAnimator;
     public SpriteRenderer SR;
 
-    private float _startJumpPower;
-    private float _startSpeed;
     // Denne bliver brugt til at gøre så man ikke kan uendeligt hoppe i luften
     private bool _isGrounded;
 
     // Start is called before the first frame update
     void Start()
     {
-        _startJumpPower = JumpPower;
-        _startSpeed = Speed;
     }
 
     // Update is called once per frame
