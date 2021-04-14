@@ -7,7 +7,7 @@ public class MovementFin : MonoBehaviour
 public SpriteRenderer SR;
     public float speed;
     private Vector2 change;
-    private Rigidbody2D myRigidbody;
+    public Rigidbody2D myRigidbody;
     // Start is called before the first frame update
     void Start()
     {
