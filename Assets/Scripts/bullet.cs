@@ -10,6 +10,7 @@ public class bullet : MonoBehaviour
     public Component Enemy;
     void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
         rb.velocity = transform.right * speed;
     }
 
@@ -17,7 +18,9 @@ public class bullet : MonoBehaviour
     {
         if(trigger.gameObject.tag == "obstacle")
         {
-        Destroy(gameObject);
+        rb.constraints = RigidbodyConstraints2D.FreezePosition;
+        rb.isKinematic = true;
+        Invoke("destroyBullet", 5f);
         }
 
         enemy enemy = trigger.GetComponent<enemy>();
@@ -27,4 +30,10 @@ public class bullet : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    void destroyBullet()
+    {
+        Destroy(gameObject);
+    }
+
 }
