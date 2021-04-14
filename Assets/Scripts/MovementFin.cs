@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MovementFin : MonoBehaviour
 {
-
+public SpriteRenderer SR;
     public float speed;
     private Vector2 change;
     private Rigidbody2D myRigidbody;
@@ -23,6 +23,5 @@ public class MovementFin : MonoBehaviour
 
         // Man bruger GetAxisRaw for at undgå acceleration eller modstands acceleration som gør movement kommer til føle mere "snappy"
         change.x = Input.GetAxisRaw("Horizontal");
-        change.y = Input.GetAxisRaw("Vertical");
     }
 }
