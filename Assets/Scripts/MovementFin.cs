@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MovementFin : MonoBehaviour
 {
-
+public SpriteRenderer SR;
     public float speed;
     public float jumpPower;
     private Vector2 change;
