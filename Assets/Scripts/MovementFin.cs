@@ -4,25 +4,26 @@ using UnityEngine;
 
 public class MovementFin : MonoBehaviour
 {
-public SpriteRenderer SR;
+    public SpriteRenderer SR;
     public float speed;
     public float jumpPower;
     private Vector2 change;
-    private Rigidbody2D myRigidbody;
+    public Rigidbody2D rb;
+    private float horizontal;
     // Start is called before the first frame update
     void Start()
     {
-
-        myRigidbody = GetComponent<Rigidbody2D>();
+        //myRigidbody = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         // For hvert frame resetter jeg hvor meget player har ændret sig
-        change = Vector2.zero;
 
         // Man bruger GetAxisRaw for at undgå acceleration eller modstands acceleration som gør movement kommer til føle mere "snappy"
-        change.x = Input.GetAxisRaw("Horizontal");
+        horizontal = Input.GetAxis("Horizontal");
+        Vector2 change = (transform.forward * horizontal) * speed * Time.fixedDeltaTime;
+        myRigidBody.velocity.x = change.x;
     }
 }
