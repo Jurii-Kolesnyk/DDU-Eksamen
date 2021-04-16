@@ -1,28 +1,28 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using System.Collections;
 
-public class MovementFin : MonoBehaviour
-{
-public SpriteRenderer SR;
-    public float speed;
-    public float jumpPower;
-    private Vector2 change;
-    public Rigidbody2D myRigidbody;
-    // Start is called before the first frame update
-    void Start()
+public class MovementFin : MonoBehaviour {
+
+
+    public float speed;    // Here we set a float variable to hold our speed value
+
+    private Rigidbody2D rb;  // This is to hold the rigidbody component
+
+    // Start is called as you start the game, we use it to initially give values to things
+    void Start ()
     {
-
-        myRigidbody = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();  // Here we actually reference the rigidbody.
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate ()
     {
-        // For hvert frame resetter jeg hvor meget player har ændret sig
-        change = Vector2.zero;
+        // We assign values based on our input here:
+        float moveHorizontal = Input.GetAxis ("Horizontal");
+        float moveVertical = Input.GetAxis ("Vertical");
 
-        // Man bruger GetAxisRaw for at undgå acceleration eller modstands acceleration som gør movement kommer til føle mere "snappy"
-        change.x = Input.GetAxisRaw("Horizontal");
+        // Here we assign those values to a Vector2 variable.
+        Vector2 movement = new Vector2 (moveHorizontal, moveVertical);
+
+        rb.AddForce (movement * speed);    // Finally we apply the forces to the rigidbody
     }
 }

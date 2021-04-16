@@ -45,11 +45,11 @@ public class PlayerMovement : MonoBehaviour
 
         if (movement.x >= 0)
         {
-            SR.flipX = false;
+            SR.flipX = true;
         }
         else
         {
-            SR.flipX = true;
+            SR.flipX = false;
         }
 
         RB.velocity = movement;
