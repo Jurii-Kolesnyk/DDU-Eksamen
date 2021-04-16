@@ -18,14 +18,28 @@ public class PlayerMovement : MonoBehaviour
     // Denne bliver brugt til at gøre så man ikke kan uendeligt hoppe i luften
     private bool _isGrounded;
 
+
+     private float _startJumpPower;
+    private float _startSpeed;
+
     // Start is called before the first frame update
     void Start()
     {
+        RB = GetComponent<Rigidbody2D>();
+        _startJumpPower = JumpPower;
+        _startSpeed = Speed;
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        // Her finder vi midten af playerens y og tager den nederste
+        float DistanceToGround = GetComponent<Collider2D>().bounds.extents.y;
+
+// Her bruges Mask til at sørge for at raycast ikke rammer Player
+     _isGrounded = Physics2D.Raycast(transform.position, Vector2.down, DistanceToGround + 0.05f, Mask);
+
         // Dette styrer movement a og d på spilleren 
         Vector2 movement = new Vector2(0, RB.velocity.y);
 
@@ -38,10 +52,13 @@ public class PlayerMovement : MonoBehaviour
             movement.x = Speed;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && _isGrounded == true)
         {
             RB.AddForce(new Vector2(0, JumpPower));
+            _isGrounded = false;
         }
+
+                // != betyder ikke = 0 
 
         if (movement.x >= 0)
         {
