@@ -2095,7 +2095,7 @@ GameObject:
   - component: {fileID: 944527366}
   - component: {fileID: 944527367}
   - component: {fileID: 944527365}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collision
   m_TagString: obstacle
   m_Icon: {fileID: 0}
@@ -7498,32 +7498,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1743783005 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6180712552205814983, guid: 2c5840a40fe1aef489d6ca74f32a8141, type: 3}
-  m_PrefabInstance: {fileID: 1864878862}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1743783006
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1743783005}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 109a0e2486095dd4fac20e41781e380c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SR: {fileID: 1743783011}
-  speed: 5
-  jumpPower: 0
-  myRigidbody: {fileID: 0}
---- !u!212 &1743783011 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 6282823667296205867, guid: 2c5840a40fe1aef489d6ca74f32a8141, type: 3}
-  m_PrefabInstance: {fileID: 1864878862}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1831066641
 GameObject:
   m_ObjectHideFlags: 0
@@ -7625,6 +7599,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6179517340192348378, guid: 2c5840a40fe1aef489d6ca74f32a8141, type: 3}
+      propertyPath: Mask.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
     - target: {fileID: 6180712552205814983, guid: 2c5840a40fe1aef489d6ca74f32a8141, type: 3}
       propertyPath: m_Name
       value: People_10 1
@@ -7635,11 +7613,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6184235952448878781, guid: 2c5840a40fe1aef489d6ca74f32a8141, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.17
+      value: -2.719
       objectReference: {fileID: 0}
     - target: {fileID: 6184235952448878781, guid: 2c5840a40fe1aef489d6ca74f32a8141, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.36
+      value: -1.117
       objectReference: {fileID: 0}
     - target: {fileID: 6184235952448878781, guid: 2c5840a40fe1aef489d6ca74f32a8141, type: 3}
       propertyPath: m_LocalPosition.z
