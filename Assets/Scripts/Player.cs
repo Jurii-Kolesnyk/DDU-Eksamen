@@ -1,24 +1,23 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
-public class PlayerMovement : MonoBehaviour
+public class Player : NetworkBehaviour
 {
     public float Speed;
     public float JumpPower;
 
     public Rigidbody2D RB;
-
-    // Dette bruges til at lave en layer mask så vores raycast ikke dector Player
-    public LayerMask Mask;
-
-    public Animator PlayerAnimator;
     public SpriteRenderer SR;
 
     private float _startJumpPower;
     private float _startSpeed;
-    // Denne bliver brugt til at gøre så man ikke kan uendeligt hoppe i luften
-    private bool _isGrounded;
+
+    //public new GameObject gameObject;
+
+    [SyncVar]
+    public int type;
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +30,8 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         // Dette styrer movement a og d på spilleren 
+        if (!isLocalPlayer) return;
+
         Vector2 movement = new Vector2(0, RB.velocity.y);
 
         if (Input.GetKey(KeyCode.A))
@@ -57,5 +58,14 @@ public class PlayerMovement : MonoBehaviour
         }
 
         RB.velocity = movement;
+
+        /*if (type == 1)
+        {
+            gameObject.tag = "Player1";
+        }
+        else
+        {
+            gameObject.tag = "Player2";
+        }*/
     }
 }
