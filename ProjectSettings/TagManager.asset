@@ -7,9 +7,13 @@ TagManager:
   - obstacle
   - Player2
   - Player1
+<<<<<<< HEAD
   - NetworkManager
   - sp1
   - sp2
+=======
+  - Bullet
+>>>>>>> a61d37c6fd824407b73c4c13f4cfe09e04105b3d
   layers:
   - Default
   - TransparentFX
@@ -19,7 +23,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Ground
   - 
   - 
   - 

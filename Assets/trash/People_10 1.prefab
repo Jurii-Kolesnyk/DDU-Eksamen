@@ -14,6 +14,9 @@ GameObject:
   - component: {fileID: 6179517340192348378}
   - component: {fileID: 6179517340192348374}
   - component: {fileID: 2365532592850859817}
+  - component: {fileID: -5598076587194685667}
+  - component: {fileID: 868499893943486093}
+  - component: {fileID: 1640456156881979730}
   m_Layer: 0
   m_Name: People_10 1
   m_TagString: Untagged
@@ -115,7 +118,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6180712552205814983}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2476e30a96fbf2841b4564cb65def602, type: 3}
   m_Name: 
@@ -159,6 +162,63 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.099999994, y: 0.13999999}
   m_Direction: 0
+--- !u!114 &-5598076587194685667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6180712552205814983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 0
+  serverOnly: 0
+  visible: 0
+  m_AssetId: 
+  hasSpawned: 0
+--- !u!114 &868499893943486093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6180712552205814983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1020a74962faada4b807ac5dc053a4cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  currentMatchDebug: 
+--- !u!114 &1640456156881979730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6180712552205814983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ccb1dd1fc7cc624e9bff1d0d7a5c741, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  canvasGroup: {fileID: 0}
+  gameText: {fileID: 0}
+  exitButton: {fileID: 0}
+  playAgainButton: {fileID: 0}
+  winCountLocal: {fileID: 0}
+  winCountOpponent: {fileID: 0}
+  canvasController: {fileID: 0}
+  player1: {fileID: 0}
+  player2: {fileID: 0}
+  startingPlayer: {fileID: 0}
+  currentPlayer: {fileID: 0}
 --- !u!1 &7845153331949679788
 GameObject:
   m_ObjectHideFlags: 0
