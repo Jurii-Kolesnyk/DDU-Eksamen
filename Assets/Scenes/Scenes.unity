@@ -1149,9 +1149,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 902927371}
-  - component: {fileID: 902927369}
-  - component: {fileID: 902927370}
   - component: {fileID: 902927372}
+  - component: {fileID: 902927370}
+  - component: {fileID: 902927369}
   m_Layer: 0
   m_Name: NetworkManager
   m_TagString: NetworkManager
@@ -1160,6 +1160,21 @@ GameObject:
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!114 &902927369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 902927368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6442dc8070ceb41f094e44de0bf87274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showGUI: 1
+  offsetX: 0
+  offsetY: 0
+--- !u!114 &902927370
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1181,21 +1196,6 @@ MonoBehaviour:
   debugLog: 0
   statisticsGUI: 0
   statisticsLog: 0
---- !u!114 &902927370
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 902927368}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6442dc8070ceb41f094e44de0bf87274, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  showGUI: 1
-  offsetX: 0
-  offsetY: 0
 --- !u!4 &902927371
 Transform:
   m_ObjectHideFlags: 0
@@ -1219,34 +1219,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 902927368}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b12d5703c500dfa48aeb317c1ecbc527, type: 3}
+  m_Script: {fileID: 11500000, guid: ba5cf5b3802db3c43853f26508b27e8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dontDestroyOnLoad: 1
   runInBackground: 1
   autoStartServerBuild: 1
   showDebugMessages: 0
-  serverTickRate: 60
+  serverTickRate: 30
   serverBatching: 0
   serverBatchInterval: 0
   offlineScene: 
   onlineScene: 
-  transport: {fileID: 902927369}
+  transport: {fileID: 902927370}
   networkAddress: localhost
-  maxConnections: 4
+  maxConnections: 2
   disconnectInactiveConnections: 0
   disconnectInactiveTimeout: 60
   authenticator: {fileID: 0}
   playerPrefab: {fileID: 401510023529814393, guid: 3992ef00e40118d498e9feb08432c40b, type: 3}
   autoCreatePlayer: 1
   playerSpawnMethod: 1
-  spawnPrefabs:
-  - {fileID: 8961928658918598603, guid: ecac73f0468e5804192a613a6747ef42, type: 3}
-  - {fileID: 858173114189535661, guid: 838d9ff7fea60ff46893f783b1daaa8f, type: 3}
+  spawnPrefabs: []
   leftRacketSpawn: {fileID: 2043073608}
   rightRacketSpawn: {fileID: 1598394101}
-  livePlayer: {fileID: 0}
-  bulletForce: 20
 --- !u!1001 &953292138
 PrefabInstance:
   m_ObjectHideFlags: 0

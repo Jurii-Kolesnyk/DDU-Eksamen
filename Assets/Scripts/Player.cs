@@ -13,22 +13,30 @@ public class Player : NetworkBehaviour
 
     private float _startJumpPower;
     private float _startSpeed;
+    GameObject manager;
+    Networker n;
 
-    //public new GameObject gameObject;
 
     [SyncVar]
     public int type;
 
-    // Start is called before the first frame update
+    [SyncVar]
+    public int health = 3;
+
+    //Start is called before the first frame update
     void Start()
     {
+
         _startJumpPower = JumpPower;
         _startSpeed = Speed;
+        manager = GameObject.FindWithTag("NetworkManager");
+        n = manager.GetComponent<Networker>();
     }
 
-    // Update is called once per frame
+    //Update is called once per frame
     void Update()
     {
+
         // Dette styrer movement a og d på spilleren 
         if (!isLocalPlayer) return;
 
@@ -59,13 +67,15 @@ public class Player : NetworkBehaviour
 
         RB.velocity = movement;
 
-        /*if (type == 1)
+        if (health == health - 1)
         {
-            gameObject.tag = "Player1";
+            Respawn();
         }
-        else
-        {
-            gameObject.tag = "Player2";
-        }*/
+
+    }
+    [ClientRpc]
+    public void Respawn()
+    {
+        gameObject.transform.position = n.start.position;
     }
 }

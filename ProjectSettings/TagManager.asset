@@ -7,8 +7,9 @@ TagManager:
   - obstacle
   - Player2
   - Player1
-  - sp
   - NetworkManager
+  - sp1
+  - sp2
   layers:
   - Default
   - TransparentFX
