@@ -10,18 +10,19 @@ public class Player : NetworkBehaviour
 
     public Rigidbody2D RB;
     public SpriteRenderer SR;
-
+    public LayerMask Mask;
     private float _startJumpPower;
     private float _startSpeed;
     GameObject manager;
     Networker n;
+    HeadDetect child;
+    public bool healthLoss = false;
 
     [SyncVar]
     public int type;
 
     [SyncVar]
     public int health = 3;
-
     // Denne bliver brugt til at gøre så man ikke kan uendeligt hoppe i luften
     private bool _isGrounded;
     void Start()
@@ -29,6 +30,7 @@ public class Player : NetworkBehaviour
         RB = GetComponent<Rigidbody2D>();
         _startJumpPower = JumpPower;
         _startSpeed = Speed;
+        child = gameObject.GetComponentInChildren<HeadDetect>().GetComponent<HeadDetect>();
         manager = GameObject.FindWithTag("NetworkManager");
         n = manager.GetComponent<Networker>();
     }
@@ -74,15 +76,37 @@ public class Player : NetworkBehaviour
 
         RB.velocity = movement;
 
-        if (health == health - 1)
+        // if (type == 2)
+        // {
+        //     Debug.Log(type + " player has - " + healthLoss + " - status on his boolean");
+        // }
+        if (healthLoss == true)
         {
-            Respawn();
+            healthLoss = false;
+            Debug.Log("Lost health detected on player" + child.ourp.type);
+            child.ourp.respawnEngaged();
         }
 
+    }
+    [Command]
+    public void respawnEngaged()
+    {
+        Respawn();
     }
     [ClientRpc]
     public void Respawn()
     {
-        gameObject.transform.position = n.start.position;
+        Debug.Log("Has Respawned!");
+
+        if (child.ourp.type == 1)
+        {
+            child.ourp.transform.position = n.leftRacketSpawn.position;
+        }
+        else
+        {
+            child.ourp.transform.position = n.rightRacketSpawn.position;
+        }
+        Debug.Log("Player number - " + child.ourp.type + " - is the gameObject");
     }
+
 }

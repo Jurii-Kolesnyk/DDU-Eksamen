@@ -14,7 +14,6 @@ public class Networker : NetworkManager
 
     public Transform start;
 
-
     public override void OnServerAddPlayer(NetworkConnection conn)
     {
         // add player at correct spawn position
@@ -25,22 +24,12 @@ public class Networker : NetworkManager
         if (numPlayers > 0)
         {
             p.type = 2;
-            //c.collNum = 2;
 
         }
         else
         {
             p.type = 1;
-            //c.collNum = 1;
         }
         NetworkServer.AddPlayerForConnection(conn, player);
     }
-
-    /*public void Update()
-    {
-        if (numPlayers == 2)
-        {
-            player.GetComponent<HeadDetect>().gameObject.SetActive(true);
-        }
-    }*/
 }

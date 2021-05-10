@@ -145,6 +145,9 @@ MonoBehaviour:
   JumpPower: 300
   RB: {fileID: 402562178916706244}
   SR: {fileID: 532881310853441941}
+  Mask:
+    serializedVersion: 2
+    m_Bits: 256
   type: 0
   health: 3
 --- !u!70 &4828245021650763741
