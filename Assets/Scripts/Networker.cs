@@ -42,13 +42,7 @@ public class Networker : NetworkManager
             p.type = 1;
         }
         NetworkServer.AddPlayerForConnection(conn, player);
-        bla();
         blabla();
-    }
-
-    void bla()
-    {
-
     }
 
     void blabla()

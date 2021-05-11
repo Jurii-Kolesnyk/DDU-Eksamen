@@ -12,7 +12,6 @@ public class HeadDetect : NetworkBehaviour
     GameObject parent;
     public Player ourp;
     bool collEnt = false;
-    public Image[] hearts;
 
 
     [SyncVar]
@@ -33,13 +32,6 @@ public class HeadDetect : NetworkBehaviour
         if (ourp.type == 2)
         {
             n.hasEntered = false;
-        }
-        for (int i = ourp.health; i > 0; i--)
-        {
-            if (ourp.health < i)
-            {
-                hearts[i].sprite = null;//slet et hjerte fra arrayet. Hvordan gør man det???
-            }
         }
     }
 
