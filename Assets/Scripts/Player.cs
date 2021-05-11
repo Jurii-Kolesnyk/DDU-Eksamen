@@ -7,7 +7,6 @@ public class Player : NetworkBehaviour
 {
     public float Speed;
     public float JumpPower;
-
     public Rigidbody2D RB;
     public SpriteRenderer SR;
     public LayerMask Mask;
@@ -23,6 +22,9 @@ public class Player : NetworkBehaviour
 
     [SyncVar]
     public int health = 3;
+    // [SyncVar]
+    // public int indZero = 0;
+
     // Denne bliver brugt til at gøre så man ikke kan uendeligt hoppe i luften
     private bool _isGrounded;
     void Start()
@@ -39,54 +41,55 @@ public class Player : NetworkBehaviour
     void Update()
     {
         // Dette styrer movement a og d på spilleren 
-        if (!isLocalPlayer) return;
-        // Her finder vi midten af playerens y og tager den nederste
-        float DistanceToGround = GetComponent<Collider2D>().bounds.extents.y;
-
-        // Her bruges Mask til at sørge for at raycast ikke rammer Player
-        _isGrounded = Physics2D.Raycast(transform.position, Vector2.down, DistanceToGround + 0.05f, Mask);
-
-        Vector2 movement = new Vector2(0, RB.velocity.y);
-
-        if (Input.GetKey(KeyCode.A))
+        if (isLocalPlayer && n.indZero == true)
         {
-            movement.x = -Speed;
-        }
-        else if (Input.GetKey(KeyCode.D))
-        {
-            movement.x = Speed;
-        }
+            // Her finder vi midten af playerens y og tager den nederste
+            float DistanceToGround = GetComponent<Collider2D>().bounds.extents.y;
 
-        if (Input.GetKeyDown(KeyCode.Space) && _isGrounded == true)
-        {
-            RB.AddForce(new Vector2(0, JumpPower));
-            _isGrounded = false;
+            // Her bruges Mask til at sørge for at raycast ikke rammer Player
+            _isGrounded = Physics2D.Raycast(transform.position, Vector2.down, DistanceToGround + 0.05f, Mask);
+
+            Vector2 movement = new Vector2(0, RB.velocity.y);
+
+            if (Input.GetKey(KeyCode.A))
+            {
+                movement.x = -Speed;
+            }
+            else if (Input.GetKey(KeyCode.D))
+            {
+                movement.x = Speed;
+            }
+
+            if (Input.GetKeyDown(KeyCode.Space) && _isGrounded == true)
+            {
+                RB.AddForce(new Vector2(0, JumpPower));
+                _isGrounded = false;
+            }
+
+            // != betyder ikke = 0 
+
+            if (movement.x >= 0)
+            {
+                SR.flipX = true;
+            }
+            else
+            {
+                SR.flipX = false;
+            }
+
+            RB.velocity = movement;
+
+            // if (type == 2)
+            // {
+            //     Debug.Log(type + " player has - " + healthLoss + " - status on his boolean");
+            // }
+            if (healthLoss == true)
+            {
+                healthLoss = false;
+                Debug.Log("Lost health detected on player" + child.ourp.type);
+                child.ourp.respawnEngaged();
+            }
         }
-
-        // != betyder ikke = 0 
-
-        if (movement.x >= 0)
-        {
-            SR.flipX = true;
-        }
-        else
-        {
-            SR.flipX = false;
-        }
-
-        RB.velocity = movement;
-
-        // if (type == 2)
-        // {
-        //     Debug.Log(type + " player has - " + healthLoss + " - status on his boolean");
-        // }
-        if (healthLoss == true)
-        {
-            healthLoss = false;
-            Debug.Log("Lost health detected on player" + child.ourp.type);
-            child.ourp.respawnEngaged();
-        }
-
     }
     [Command]
     public void respawnEngaged()

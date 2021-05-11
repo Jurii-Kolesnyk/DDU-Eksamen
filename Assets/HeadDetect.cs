@@ -1,5 +1,6 @@
 ﻿
 using UnityEngine;
+using UnityEngine.UI;
 using Mirror;
 
 public class HeadDetect : NetworkBehaviour
@@ -11,7 +12,6 @@ public class HeadDetect : NetworkBehaviour
     GameObject parent;
     public Player ourp;
     bool collEnt = false;
-    //public bool healthLoss = false;
 
 
     [SyncVar]
@@ -27,15 +27,13 @@ public class HeadDetect : NetworkBehaviour
 
         collNum = ourp.type;
     }
-    // void Update()
-    // {
-    //     if (healthLoss == true)
-    //     {
-    //         healthLoss = false;
-    //         Debug.Log("Lost health detected on player" + ourp.type);
-    //         ourp.respawnEngaged();
-    //     }
-    // }
+    void Update()
+    {
+        if (ourp.type == 2)
+        {
+            n.hasEntered = false;
+        }
+    }
 
     [Client]
     public void OnCollisionEnter2D(Collision2D collision)
@@ -62,18 +60,4 @@ public class HeadDetect : NetworkBehaviour
             collEnt = false;
         }
     }
-
-    // [Command]
-    // public void respawnEngaged()
-    // {
-    //     Respawn();
-    // }
-    // [ClientRpc]
-    // public void Respawn()
-    // {
-    //     Debug.Log("Has Respawned!");
-    //     ourp.transform.position = n.start.position;
-    //     Debug.Log("Player number - " + ourp.type + " - is the gameObject");
-    // }
-
 }

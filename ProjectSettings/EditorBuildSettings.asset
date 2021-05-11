@@ -8,12 +8,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Menu.unity
     guid: 99c4bf98c9dc2664bbaa0dcca1c7ee54
-  - enabled: 0
-    path: Assets/Scenes/Swamp Themed Map.unity
-    guid: 06c0a0aacae18cc42951e1a9981f33b2
   - enabled: 1
     path: Assets/Scenes/Scenes.unity
     guid: 5707b896deee76942bbb174506c29671
+  - enabled: 0
+    path: Assets/Scenes/Swamp Themed Map.unity
+    guid: 06c0a0aacae18cc42951e1a9981f33b2
   - enabled: 0
     path: Assets/Scenes/Game.unity
     guid: 123b0034e78406d478fecd6c7af5d79f
