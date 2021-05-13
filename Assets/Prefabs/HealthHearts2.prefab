@@ -202,7 +202,7 @@ GameObject:
   - component: {fileID: 8831206801015186055}
   m_Layer: 5
   m_Name: HealthHearts2
-  m_TagString: Untagged
+  m_TagString: HP
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

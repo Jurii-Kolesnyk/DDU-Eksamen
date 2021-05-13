@@ -17,7 +17,6 @@ public class HP : NetworkBehaviour
 
     [SyncVar]
     public int playerSync;
-    HeadDetect children;
     private bool hasFound = false;
     void Update()
     {
@@ -45,7 +44,6 @@ public class HP : NetworkBehaviour
         {
             health = numOfHearts;
         }
-
         for (int i = 0; i < hearts.Length; i++)
         {
             if (i < health)

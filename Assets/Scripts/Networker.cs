@@ -17,10 +17,6 @@ public class Networker : NetworkManager
     public Transform start;
     public Transform h11;
     public Transform h12;
-    // public Transform h13;
-    // public Transform h21;
-    // public Transform h22;
-    // public Transform h23;
     public bool hasEntered = true;
     public bool indZero = false;
 

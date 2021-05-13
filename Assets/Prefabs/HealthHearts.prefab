@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 1286913092441960806}
   m_Layer: 5
   m_Name: HealthHearts
-  m_TagString: Untagged
+  m_TagString: HP
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -235,6 +235,7 @@ MonoBehaviour:
   - {fileID: 4315721079762993295}
   fullHeart: {fileID: 21300004, guid: fe268ca64836f9147a5668bfa956f5ad, type: 3}
   emptyHeart: {fileID: 21300014, guid: fe268ca64836f9147a5668bfa956f5ad, type: 3}
+  playerSync: 0
 --- !u!1 &4315721079762993294
 GameObject:
   m_ObjectHideFlags: 0

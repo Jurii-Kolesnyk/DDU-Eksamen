@@ -10,6 +10,7 @@ TagManager:
   - NetworkManager
   - sp1
   - sp2
+  - HP
   layers:
   - Default
   - TransparentFX

@@ -140,8 +140,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  Speed: 3
-  JumpPower: 300
+  Speed: 30
+  JumpPower: 3000
   RB: {fileID: 402562178916706244}
   SR: {fileID: 532881310853441941}
   Mask:

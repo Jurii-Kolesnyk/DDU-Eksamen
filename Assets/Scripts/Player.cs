@@ -15,6 +15,12 @@ public class Player : NetworkBehaviour
     GameObject manager;
     Networker n;
     HeadDetect child;
+
+    //-----------------------------------------------------------------
+    public GameObject h;
+    public HP HP;
+    //-----------------------------------------------------------------
+
     public bool healthLoss = false;
 
     [SyncVar]
@@ -22,8 +28,6 @@ public class Player : NetworkBehaviour
 
     [SyncVar]
     public int health = 3;
-    // [SyncVar]
-    // public int indZero = 0;
 
     // Denne bliver brugt til at gøre så man ikke kan uendeligt hoppe i luften
     private bool _isGrounded;
@@ -40,6 +44,7 @@ public class Player : NetworkBehaviour
     //Update is called once per frame
     void Update()
     {
+
         // Dette styrer movement a og d på spilleren 
         if (isLocalPlayer && n.indZero == true)
         {
@@ -79,10 +84,6 @@ public class Player : NetworkBehaviour
 
             RB.velocity = movement;
 
-            // if (type == 2)
-            // {
-            //     Debug.Log(type + " player has - " + healthLoss + " - status on his boolean");
-            // }
             if (healthLoss == true)
             {
                 healthLoss = false;
@@ -91,6 +92,45 @@ public class Player : NetworkBehaviour
             }
         }
     }
+    // [Command]
+    // public void CmdHeartStatus()
+    // {
+    //     RpcHeartStatus();
+    // }
+    // [ClientRpc]
+    // public void RpcHeartStatus()
+    // {
+    //     if (HP.health > HP.numOfHearts)
+    //     {
+    //         HP.health = HP.numOfHearts;
+    //     }
+
+    //     for (int i = 0; i < HP.hearts.Length; i++)
+    //     {
+    //         if (i < HP.health)
+    //         {
+    //             HP.hearts[i].sprite = HP.fullHeart;
+    //         }
+    //         else
+    //         {
+    //             HP.hearts[i].sprite = HP.emptyHeart;
+    //         }
+    //         if (i < HP.numOfHearts)
+    //         {
+    //             HP.hearts[i].enabled = true;
+    //         }
+    //         else
+    //         {
+    //             HP.hearts[i].enabled = false;
+    //         }
+    //     }
+    // }
+
+
+
+
+
+
     [Command]
     public void respawnEngaged()
     {

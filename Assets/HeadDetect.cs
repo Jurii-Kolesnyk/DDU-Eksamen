@@ -11,6 +11,7 @@ public class HeadDetect : NetworkBehaviour
     GameObject parent;
     public Player ourp;
     bool collEnt = false;
+    //private bool hasFound = false;
 
 
     [SyncVar]
@@ -39,6 +40,19 @@ public class HeadDetect : NetworkBehaviour
         {
             n.hasEntered = false;
         }
+
+        // if (ourp.type == 1 && hasFound == false)
+        // {
+        //     ourp.h = GameObject.Find("HealthHearts(Clone)");
+        //     ourp.HP = ourp.h.GetComponent<HP>();
+        //     hasFound = true;
+        // }
+        // if (ourp.type == 2 && hasFound == false)
+        // {
+        //     ourp.h = GameObject.Find("HealthHearts2(Clone)");
+        //     ourp.HP = ourp.h.GetComponent<HP>();
+        //     hasFound = true;
+        // }
 
         //---------------------------------------------------------------------------------------------------
         // if (health > numOfHearts)
