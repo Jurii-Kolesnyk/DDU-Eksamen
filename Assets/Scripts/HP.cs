@@ -12,12 +12,18 @@ public class HP : NetworkBehaviour
     public Sprite fullHeart;
     public Sprite emptyHeart;
 
-    // void Start(){
-    //     Player h = gameObject.GetComponent<Player>();
-    //     health = h.health;
-    // }
+    GameObject player;
+    Player p;
+
+    void Start()
+    {
+        player = GameObject.FindWithTag("Player");
+        p = player.GetComponent<Player>();
+        numOfHearts = p.health;
+    }
     void Update()
     {
+        health = p.health;
 
         if (health > numOfHearts)
         {

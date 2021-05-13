@@ -106,6 +106,7 @@ GameObject:
   - component: {fileID: 4315721078865006004}
   - component: {fileID: 4315721078865006007}
   - component: {fileID: 4985638344304885140}
+  - component: {fileID: 1286913092441960806}
   m_Layer: 5
   m_Name: HealthHearts
   m_TagString: Untagged
@@ -212,6 +213,28 @@ MonoBehaviour:
   visible: 0
   m_AssetId: 
   hasSpawned: 0
+--- !u!114 &1286913092441960806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4315721078865006006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1385059484e96604f8055675b659e2e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  health: 0
+  numOfHearts: 0
+  hearts:
+  - {fileID: 4315721079926839746}
+  - {fileID: 4315721078603991073}
+  - {fileID: 4315721079762993295}
+  fullHeart: {fileID: 21300004, guid: fe268ca64836f9147a5668bfa956f5ad, type: 3}
+  emptyHeart: {fileID: 21300014, guid: fe268ca64836f9147a5668bfa956f5ad, type: 3}
 --- !u!1 &4315721079762993294
 GameObject:
   m_ObjectHideFlags: 0
