@@ -12,22 +12,34 @@ public class HP : NetworkBehaviour
     public Sprite fullHeart;
     public Sprite emptyHeart;
 
-    GameObject player;
+    GameObject[] player;
     Player p;
-    HeadDetect children;
 
-    void Start()
-    {
-        player = GameObject.FindWithTag("Player");
-        children = player.GetComponentInChildren<HeadDetect>();
-        Debug.Log("the type of children - " + children.ourp.type);
-        Debug.Log("the type of collNum - " + children.collNum);
-        //p = player.GetComponent<Player>();
-        numOfHearts = children.ourp.health;
-    }
+    [SyncVar]
+    public int playerSync;
+    HeadDetect children;
+    private bool hasFound = false;
     void Update()
     {
-        health = children.ourp.health;
+        if (hasFound == false)
+        {
+            player = GameObject.FindGameObjectsWithTag("Player");
+            foreach (GameObject Player in player)
+            {
+                p = Player.GetComponent<Player>();
+            }
+            if (p.type == playerSync)
+            {
+                hasFound = true;
+                Debug.Log("bool got true at player number - " + p.type);
+                //children = player.GetComponentInChildren<HeadDetect>();
+                Debug.Log("the type of children - " + p.type);
+
+                numOfHearts = p.health;
+            }
+            else return;
+        }
+        health = p.health;
 
         if (health > numOfHearts)
         {

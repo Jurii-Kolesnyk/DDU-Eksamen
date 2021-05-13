@@ -328,6 +328,7 @@ MonoBehaviour:
   - {fileID: 8831206801015186067}
   fullHeart: {fileID: 21300004, guid: fe268ca64836f9147a5668bfa956f5ad, type: 3}
   emptyHeart: {fileID: 21300014, guid: fe268ca64836f9147a5668bfa956f5ad, type: 3}
+  playerSync: 0
 --- !u!1 &8831206801015186111
 GameObject:
   m_ObjectHideFlags: 0

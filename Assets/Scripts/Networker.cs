@@ -49,6 +49,8 @@ public class Networker : NetworkManager
         if (p.type == 1)
         {
             GameObject health = Instantiate(spawnPrefabs.Find(prefab => prefab.name == "HealthHearts"), h11.position, h11.rotation);
+            HP h = health.GetComponent<HP>();
+            h.playerSync = 1;
             NetworkServer.Spawn(health, player);
         }
         if (p.type == 2)
@@ -56,6 +58,8 @@ public class Networker : NetworkManager
             GameObject toxt = Instantiate(spawnPrefabs.Find(prefab => prefab.name == "Canvas"), SpawnPointTimer.position, SpawnPointTimer.rotation);
             NetworkServer.Spawn(toxt);
             GameObject health = Instantiate(spawnPrefabs.Find(prefab => prefab.name == "HealthHearts2"), h12.position, h12.rotation);
+            HP h = health.GetComponent<HP>();
+            h.playerSync = 2;
             NetworkServer.Spawn(health, player);
         }
     }
