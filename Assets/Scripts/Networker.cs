@@ -55,7 +55,7 @@ public class Networker : NetworkManager
         {
             GameObject toxt = Instantiate(spawnPrefabs.Find(prefab => prefab.name == "Canvas"), SpawnPointTimer.position, SpawnPointTimer.rotation);
             NetworkServer.Spawn(toxt);
-            GameObject health = Instantiate(spawnPrefabs.Find(prefab => prefab.name == "HealthHearts"), h12.position, h12.rotation);
+            GameObject health = Instantiate(spawnPrefabs.Find(prefab => prefab.name == "HealthHearts2"), h12.position, h12.rotation);
             NetworkServer.Spawn(health, player);
         }
     }

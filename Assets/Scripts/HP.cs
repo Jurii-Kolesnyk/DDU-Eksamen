@@ -14,16 +14,20 @@ public class HP : NetworkBehaviour
 
     GameObject player;
     Player p;
+    HeadDetect children;
 
     void Start()
     {
         player = GameObject.FindWithTag("Player");
-        p = player.GetComponent<Player>();
-        numOfHearts = p.health;
+        children = player.GetComponentInChildren<HeadDetect>();
+        Debug.Log("the type of children - " + children.ourp.type);
+        Debug.Log("the type of collNum - " + children.collNum);
+        //p = player.GetComponent<Player>();
+        numOfHearts = children.ourp.health;
     }
     void Update()
     {
-        health = p.health;
+        health = children.ourp.health;
 
         if (health > numOfHearts)
         {
