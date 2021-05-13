@@ -351,6 +351,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2645222693099296203, guid: 87b0f9b121839dc448f6af99ae91bf11, type: 3}
+      propertyPath: sceneId
+      value: 2762747758
+      objectReference: {fileID: 0}
     - target: {fileID: 4315721078865006002, guid: 87b0f9b121839dc448f6af99ae91bf11, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -438,6 +442,18 @@ PrefabInstance:
     - target: {fileID: 4315721078865006006, guid: 87b0f9b121839dc448f6af99ae91bf11, type: 3}
       propertyPath: m_Name
       value: HealthHearts
+      objectReference: {fileID: 0}
+    - target: {fileID: 4332666612491622937, guid: 87b0f9b121839dc448f6af99ae91bf11, type: 3}
+      propertyPath: sceneId
+      value: 1705345864
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985638344304885140, guid: 87b0f9b121839dc448f6af99ae91bf11, type: 3}
+      propertyPath: sceneId
+      value: 1139664060
+      objectReference: {fileID: 0}
+    - target: {fileID: 5540365043387011105, guid: 87b0f9b121839dc448f6af99ae91bf11, type: 3}
+      propertyPath: sceneId
+      value: 2014743932
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87b0f9b121839dc448f6af99ae91bf11, type: 3}

@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 401510023529814393}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.119, y: -0.735, z: 0}
-  m_LocalScale: {x: 15, y: 15, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6628196002648312663}
   m_Father: {fileID: 0}
@@ -140,8 +140,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  Speed: 30
-  JumpPower: 2000
+  Speed: 3
+  JumpPower: 300
   RB: {fileID: 402562178916706244}
   SR: {fileID: 532881310853441941}
   Mask:
@@ -304,6 +304,11 @@ MonoBehaviour:
   syncInterval: 0.1
   ourp: {fileID: 0}
   collNum: 0
+  health: 0
+  numOfHearts: 0
+  hearts: []
+  fullHeart: {fileID: 0}
+  emptyHeart: {fileID: 0}
 --- !u!114 &1323097912025715904
 MonoBehaviour:
   m_ObjectHideFlags: 0
