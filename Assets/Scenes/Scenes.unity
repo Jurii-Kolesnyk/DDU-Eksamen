@@ -1375,14 +1375,15 @@ MonoBehaviour:
   playerSpawnMethod: 1
   spawnPrefabs:
   - {fileID: 4104038117640748599, guid: a1f9e792ebb3d3e438c9b60dd5c28b57, type: 3}
-  - {fileID: 5168313814651458068, guid: aef9dc1797ec6aa408caf8c04fc6cf9d, type: 3}
-  - {fileID: 5136715054514334636, guid: 24bed9e6ed462384391d8bb93b594f36, type: 3}
+  - {fileID: 4315721078865006006, guid: 87b0f9b121839dc448f6af99ae91bf11, type: 3}
   leftRacketSpawn: {fileID: 2043073608}
   rightRacketSpawn: {fileID: 1598394101}
   player: {fileID: 0}
   p: {fileID: 0}
   SpawnPointTimer: {fileID: 707005927}
   start: {fileID: 0}
+  h11: {fileID: 1038098472}
+  h12: {fileID: 607221385}
   hasEntered: 1
   indZero: 0
 --- !u!222 &902927375

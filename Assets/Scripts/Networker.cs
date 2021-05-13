@@ -15,8 +15,8 @@ public class Networker : NetworkManager
     public Player p;
     public Transform SpawnPointTimer;
     public Transform start;
-    // public Transform h11;
-    // public Transform h12;
+    public Transform h11;
+    public Transform h12;
     // public Transform h13;
     // public Transform h21;
     // public Transform h22;
@@ -44,13 +44,19 @@ public class Networker : NetworkManager
         NetworkServer.AddPlayerForConnection(conn, player);
         blabla();
     }
-
     void blabla()
     {
+        if (p.type == 1)
+        {
+            GameObject health = Instantiate(spawnPrefabs.Find(prefab => prefab.name == "HealthHearts"), h11.position, h11.rotation);
+            NetworkServer.Spawn(health, player);
+        }
         if (p.type == 2)
         {
             GameObject toxt = Instantiate(spawnPrefabs.Find(prefab => prefab.name == "Canvas"), SpawnPointTimer.position, SpawnPointTimer.rotation);
             NetworkServer.Spawn(toxt);
+            GameObject health = Instantiate(spawnPrefabs.Find(prefab => prefab.name == "HealthHearts"), h12.position, h12.rotation);
+            NetworkServer.Spawn(health, player);
         }
     }
 }
