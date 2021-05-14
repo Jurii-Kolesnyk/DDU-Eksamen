@@ -10,19 +10,17 @@ public class HeadDetect : NetworkBehaviour
     // Player p;
     GameObject parent;
     public Player ourp;
-    bool collEnt = false;
+
+    [SyncVar]
+    public bool collEnt = false;
+
+    [SyncVar]
+    public bool healthLoss = false;
     //private bool hasFound = false;
 
 
     [SyncVar]
     public int collNum;
-    //-----------------------------------------------------------------------------------------------------
-    // public int health;
-    // public int numOfHearts;
-    // public Image[] hearts;
-    // public Sprite fullHeart;
-    // public Sprite emptyHeart;
-    //-----------------------------------------------------------------------------------------------------
 
     void Start()
     {
@@ -41,48 +39,9 @@ public class HeadDetect : NetworkBehaviour
             n.hasEntered = false;
         }
 
-        // if (ourp.type == 1 && hasFound == false)
-        // {
-        //     ourp.h = GameObject.Find("HealthHearts(Clone)");
-        //     ourp.HP = ourp.h.GetComponent<HP>();
-        //     hasFound = true;
-        // }
-        // if (ourp.type == 2 && hasFound == false)
-        // {
-        //     ourp.h = GameObject.Find("HealthHearts2(Clone)");
-        //     ourp.HP = ourp.h.GetComponent<HP>();
-        //     hasFound = true;
-        // }
-
-        //---------------------------------------------------------------------------------------------------
-        // if (health > numOfHearts)
-        // {
-        //     health = numOfHearts;
-        // }
-
-        // for (int i = 0; i < hearts.Length; i++)
-        // {
-        //     if (i < health)
-        //     {
-        //         hearts[i].sprite = fullHeart;
-        //     }
-        //     else
-        //     {
-        //         hearts[i].sprite = emptyHeart;
-        //     }
-        //     if (i < numOfHearts)
-        //     {
-        //         hearts[i].enabled = true;
-        //     }
-        //     else
-        //     {
-        //         hearts[i].enabled = false;
-        //     }
-        // }
-        //---------------------------------------------------------------------------------------------------
     }
 
-    [Server]
+    [Client]
     public void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player" && collNum == ourp.type && collEnt == false)
@@ -91,20 +50,21 @@ public class HeadDetect : NetworkBehaviour
             Debug.Log(collNum + " - the killed");*/
             collEnt = true;
             Debug.Log("Collision detected on player " + ourp.type);
+            healthLoss = true;
 
-            ourp.health -= 1;
-            ourp.healthLoss = true;
-            Debug.Log("status on player - " + ourp.type + " - of boolean - " + ourp.healthLoss);
+            // ourp.health -= 1;
+            // healthLoss = true;
+            // Debug.Log("status on player - " + ourp.type + " - of boolean - " + healthLoss);
         }
     }
     //skal til for at man kun rammer 1 gang når man rammer hovedet, så man ikke detecter hver gang
     //der kollideres, så man ikke kan fjerne fx 2 liv på 1 hop
-    [Client]
-    public void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Player" && collNum == ourp.type && collEnt == true)
-        {
-            collEnt = false;
-        }
-    }
+    // [Client]
+    // public void OnCollisionExit2D(Collision2D collision)
+    // {
+    //     if (collision.gameObject.tag == "Player" && collNum == ourp.type && collEnt == true)
+    //     {
+    //         collEnt = false;
+    //     }
+    // }
 }

@@ -34,7 +34,7 @@ public class HP : NetworkBehaviour
                 hasFound = true;
                 Debug.Log("bool got true at player number - " + p.type);
                 //children = player.GetComponentInChildren<HeadDetect>();
-                Debug.Log("the type of children - " + p.type);
+                //Debug.Log("the type of children - " + p.type);
 
                 numOfHearts = p.health;
             }
@@ -42,10 +42,10 @@ public class HP : NetworkBehaviour
         }
         health = p.health;
 
-        if (health > numOfHearts)
-        {
-            health = numOfHearts;
-        }
+        // if (health > numOfHearts)
+        // {
+        //     health = numOfHearts;
+        // }
         for (int i = 0; i < hearts.Length; i++)
         {
             if (i < health)
@@ -55,6 +55,7 @@ public class HP : NetworkBehaviour
             else
             {
                 hearts[i].sprite = emptyHeart;
+                //Debug.Log("lost live on player " + p.type);
             }
             if (i < numOfHearts)
             {

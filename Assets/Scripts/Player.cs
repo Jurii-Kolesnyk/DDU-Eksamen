@@ -16,12 +16,8 @@ public class Player : NetworkBehaviour
     Networker n;
     HeadDetect child;
 
-    //-----------------------------------------------------------------
-    public GameObject h;
-    public HP HP;
-    //-----------------------------------------------------------------
-
-    public bool healthLoss = false;
+    // [SyncVar]
+    // public bool healthLoss = false;
 
     [SyncVar]
     public int type;
@@ -84,72 +80,46 @@ public class Player : NetworkBehaviour
 
             RB.velocity = movement;
 
-            if (healthLoss == true)
+            if (child.collEnt == true)
             {
-                healthLoss = false;
-                Debug.Log("Lost health detected on player" + child.ourp.type);
                 child.ourp.respawnEngaged();
             }
         }
     }
-    // [Command]
-    // public void CmdHeartStatus()
-    // {
-    //     RpcHeartStatus();
-    // }
-    // [ClientRpc]
-    // public void RpcHeartStatus()
-    // {
-    //     if (HP.health > HP.numOfHearts)
-    //     {
-    //         HP.health = HP.numOfHearts;
-    //     }
-
-    //     for (int i = 0; i < HP.hearts.Length; i++)
-    //     {
-    //         if (i < HP.health)
-    //         {
-    //             HP.hearts[i].sprite = HP.fullHeart;
-    //         }
-    //         else
-    //         {
-    //             HP.hearts[i].sprite = HP.emptyHeart;
-    //         }
-    //         if (i < HP.numOfHearts)
-    //         {
-    //             HP.hearts[i].enabled = true;
-    //         }
-    //         else
-    //         {
-    //             HP.hearts[i].enabled = false;
-    //         }
-    //     }
-    // }
-
-
-
-
-
 
     [Command]
     public void respawnEngaged()
     {
         Respawn();
+        // child.collEnt = true;
     }
     [ClientRpc]
     public void Respawn()
     {
-        Debug.Log("Has Respawned!");
 
-        if (child.ourp.type == 1)
+        //Debug.Log("death - " + child.ourp.type + " - with - " + child.ourp.health);
+        // child.healthLoss = true;
+        Debug.Log("status on player - " + child.ourp.type + " - of boolean - " + child.healthLoss);
+        if (child.healthLoss == true)
         {
-            child.ourp.transform.position = n.leftRacketSpawn.position;
+            child.healthLoss = false;
+            Debug.Log("Lost health detected on player" + child.ourp.type);
+            Debug.Log("Has Respawned!");
+
+            if (child.ourp.type == 1)
+            {
+                child.ourp.transform.position = n.leftRacketSpawn.position;
+                child.ourp.health -= 1;
+                child.collEnt = false;
+            }
+            else
+            {
+                child.ourp.transform.position = n.rightRacketSpawn.position;
+                child.ourp.health -= 1;
+                child.collEnt = false;
+            }
+            Debug.Log("Player number - " + child.ourp.type + " - is the gameObject");
         }
-        else
-        {
-            child.ourp.transform.position = n.rightRacketSpawn.position;
-        }
-        Debug.Log("Player number - " + child.ourp.type + " - is the gameObject");
     }
 
 }
