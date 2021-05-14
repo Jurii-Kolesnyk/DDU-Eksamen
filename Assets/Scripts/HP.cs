@@ -56,14 +56,15 @@ public class HP : NetworkBehaviour
             }
 
         }
-        else return;
-
-        health = p.health;
-
         // if (health > numOfHearts)
         // {
         //     health = numOfHearts;
         // }
+        if (hasFound)
+        {
+            health = p.health;
+        }
+
         for (int i = 0; i < hearts.Length; i++)
         {
             if (i < health)
@@ -84,6 +85,7 @@ public class HP : NetworkBehaviour
                 hearts[i].enabled = false;
             }
         }
+
 
     }
 
