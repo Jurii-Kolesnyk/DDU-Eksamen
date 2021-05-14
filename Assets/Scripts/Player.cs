@@ -13,8 +13,8 @@ public class Player : NetworkBehaviour
     private float _startJumpPower;
     private float _startSpeed;
     //--------------------------------------------------------------------------------------------------
-    public GameObject h;
-    public HP HP;
+    // public GameObject h;
+    // public HP HP;
     //--------------------------------------------------------------------------------------------------
     GameObject manager;
     Networker n;

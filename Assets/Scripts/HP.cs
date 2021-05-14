@@ -19,31 +19,45 @@ public class HP : NetworkBehaviour
 
     [SyncVar]
     public int playerSync;
-    private bool hasFound = false;
+    public bool hasFound = false;
+
+    GameObject manager;
+
+    Networker n;
+
+    void Start()
+    {
+        manager = GameObject.FindWithTag("NetworkManager");
+        n = manager.GetComponent<Networker>();
+    }
     void Update()
     {
-        if (hasFound == false)
+        if (!hasFound && n.isFound == false)
         {
             player = GameObject.FindGameObjectsWithTag("Player");
             foreach (GameObject Player in player)
             {
                 p = Player.GetComponent<Player>();
-            }
-            if (p.type == playerSync)
-            {
-                hasFound = true;
-                Debug.Log("bool got true at player number - " + p.type);
-                //children = player.GetComponentInChildren<HeadDetect>();
-                //Debug.Log("the type of children - " + p.type);
+                if (p.type == playerSync)
+                {
+                    hasFound = true;
+                    Debug.Log("bool got activated - " + hasFound);
+                    Debug.Log("bool got true at player number - " + p.type);
+                    //children = player.GetComponentInChildren<HeadDetect>();
+                    //Debug.Log("the type of children - " + p.type);
 
-                numOfHearts = p.health;
-                //--------------------------------------------------------------------------------------------------
-                p.h = gameObject;
-                p.HP = p.h.GetComponent<HP>();
-                //--------------------------------------------------------------------------------------------------
+                    numOfHearts = p.health;
+                    //--------------------------------------------------------------------------------------------------
+                    // p.h = gameObject;
+                    // p.HP = p.h.GetComponent<HP>();
+                    //--------------------------------------------------------------------------------------------------
+                }
+                //else return;
             }
-            else return;
+
         }
+        else return;
+
         health = p.health;
 
         // if (health > numOfHearts)

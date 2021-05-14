@@ -19,6 +19,7 @@ public class Networker : NetworkManager
     public Transform h12;
     public bool hasEntered = true;
     public bool indZero = false;
+    public bool isFound = true;
 
 
     public override void OnServerAddPlayer(NetworkConnection conn)
@@ -31,6 +32,7 @@ public class Networker : NetworkManager
         if (numPlayers > 0)
         {
             p.type = 2;
+            isFound = false;
 
         }
         else
