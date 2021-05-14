@@ -12,6 +12,10 @@ public class Player : NetworkBehaviour
     public LayerMask Mask;
     private float _startJumpPower;
     private float _startSpeed;
+    //--------------------------------------------------------------------------------------------------
+    public GameObject h;
+    public HP HP;
+    //--------------------------------------------------------------------------------------------------
     GameObject manager;
     Networker n;
     HeadDetect child;

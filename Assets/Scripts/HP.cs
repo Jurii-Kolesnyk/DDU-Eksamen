@@ -37,6 +37,10 @@ public class HP : NetworkBehaviour
                 //Debug.Log("the type of children - " + p.type);
 
                 numOfHearts = p.health;
+                //--------------------------------------------------------------------------------------------------
+                p.h = gameObject;
+                p.HP = p.h.GetComponent<HP>();
+                //--------------------------------------------------------------------------------------------------
             }
             else return;
         }
