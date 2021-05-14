@@ -6,7 +6,9 @@ using Mirror;
 
 public class HP : NetworkBehaviour
 {
+    [SyncVar]
     public int health;
+    [SyncVar]
     public int numOfHearts;
     public Image[] hearts;
     public Sprite fullHeart;

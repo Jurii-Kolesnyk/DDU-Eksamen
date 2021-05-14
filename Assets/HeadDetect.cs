@@ -82,7 +82,7 @@ public class HeadDetect : NetworkBehaviour
         //---------------------------------------------------------------------------------------------------
     }
 
-    [Client]
+    [Server]
     public void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player" && collNum == ourp.type && collEnt == false)
