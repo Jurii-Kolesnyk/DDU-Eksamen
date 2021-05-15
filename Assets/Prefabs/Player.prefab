@@ -141,7 +141,7 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   Speed: 12
-  JumpPower: 1750
+  JumpPower: 1800
   RB: {fileID: 402562178916706244}
   SR: {fileID: 532881310853441941}
   Mask:
