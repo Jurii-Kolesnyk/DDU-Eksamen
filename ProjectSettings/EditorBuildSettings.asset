@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Start Up.unity
     guid: 78c06910bec2e024aadca519a7841e95
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Scenes.unity
     guid: 5707b896deee76942bbb174506c29671
   - enabled: 0
@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Game.unity
     guid: 123b0034e78406d478fecd6c7af5d79f
+  - enabled: 1
+    path: Assets/Scenes/swamp 2.unity
+    guid: 728716cbd2c051e41be9a3a96ae531bc
   m_configObjects: {}
