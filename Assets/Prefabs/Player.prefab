@@ -105,7 +105,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 15
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: b63c04e567c7f6e4da311a3692c62072, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -140,14 +140,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  Speed: 30
-  JumpPower: 3000
+  Speed: 12
+  JumpPower: 1750
   RB: {fileID: 402562178916706244}
   SR: {fileID: 532881310853441941}
   Mask:
     serializedVersion: 2
     m_Bits: 256
-  healthLoss: 0
   type: 0
   health: 3
 --- !u!114 &402562178924563811
@@ -303,6 +302,8 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   ourp: {fileID: 0}
+  collEnt: 0
+  healthLoss: 0
   collNum: 0
 --- !u!114 &1323097912025715904
 MonoBehaviour:

@@ -42,7 +42,7 @@ public class Player : NetworkBehaviour
     }
 
     //Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         // Dette styrer movement a og d på spilleren 
         if (isLocalPlayer && n.indZero == true)
@@ -64,11 +64,11 @@ public class Player : NetworkBehaviour
                 movement.x = Speed;
             }
 
-            if (Input.GetKeyDown(KeyCode.Space) && _isGrounded == true)
-            {
-                RB.AddForce(new Vector2(0, JumpPower));
-                _isGrounded = false;
-            }
+            // if (Input.GetKeyDown(KeyCode.Space) && _isGrounded == true)
+            // {
+            //     RB.AddForce(new Vector2(0, JumpPower));
+            //     _isGrounded = false;
+            // }
 
             // != betyder ikke = 0 
 
@@ -83,6 +83,22 @@ public class Player : NetworkBehaviour
 
             RB.velocity = movement;
 
+            // if (child.collEnt == true)
+            // {
+            //     child.ourp.respawnEngaged();
+            // }
+        }
+    }
+
+    void Update()
+    {
+        if (isLocalPlayer && n.indZero == true)
+        {
+            if (Input.GetKeyDown(KeyCode.Space) && _isGrounded == true)
+            {
+                RB.AddForce(new Vector2(0, JumpPower));
+                _isGrounded = false;
+            }
             if (child.collEnt == true)
             {
                 child.ourp.respawnEngaged();
