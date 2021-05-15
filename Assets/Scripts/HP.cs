@@ -16,6 +16,8 @@ public class HP : NetworkBehaviour
 
     GameObject[] player;
     Player p;
+    Player p1;
+    Player p2;
 
     [SyncVar]
     public int playerSync;
@@ -38,6 +40,15 @@ public class HP : NetworkBehaviour
             foreach (GameObject Player in player)
             {
                 p = Player.GetComponent<Player>();
+
+                if (p.type == 1)
+                {
+                    p1 = p;
+                }
+                if (p.type == 2)
+                {
+                    p2 = p;
+                }
                 if (p.type == playerSync)
                 {
                     hasFound = true;
@@ -45,7 +56,7 @@ public class HP : NetworkBehaviour
                     Debug.Log("bool got true at player number - " + p.type);
                     //children = player.GetComponentInChildren<HeadDetect>();
                     //Debug.Log("the type of children - " + p.type);
-
+                    p = Player.GetComponent<Player>();
                     numOfHearts = p.health;
                     //--------------------------------------------------------------------------------------------------
                     // p.h = gameObject;
@@ -60,9 +71,13 @@ public class HP : NetworkBehaviour
         // {
         //     health = numOfHearts;
         // }
-        if (hasFound)
+        if (hasFound && playerSync == p1.type)
         {
-            health = p.health;
+            health = p1.health;
+        }
+        else if (hasFound && playerSync == p2.type)
+        {
+            health = p2.health;
         }
 
         for (int i = 0; i < hearts.Length; i++)

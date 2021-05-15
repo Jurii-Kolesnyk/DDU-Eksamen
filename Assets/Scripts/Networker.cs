@@ -42,6 +42,13 @@ public class Networker : NetworkManager
         NetworkServer.AddPlayerForConnection(conn, player);
         blabla();
     }
+
+    public override void OnClientDisconnect(NetworkConnection conn)
+    {
+        base.OnClientDisconnect(conn);
+        indZero = false;
+        p.health = 3;
+    }
     void blabla()
     {
         if (p.type == 1)

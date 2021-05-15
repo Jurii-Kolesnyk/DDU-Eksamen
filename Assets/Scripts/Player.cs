@@ -44,7 +44,6 @@ public class Player : NetworkBehaviour
     //Update is called once per frame
     void Update()
     {
-
         // Dette styrer movement a og d på spilleren 
         if (isLocalPlayer && n.indZero == true)
         {
