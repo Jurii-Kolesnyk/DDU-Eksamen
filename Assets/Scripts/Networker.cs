@@ -43,10 +43,13 @@ public class Networker : NetworkManager
         blabla();
     }
 
-    public override void OnClientDisconnect(NetworkConnection conn)
+    public override void OnServerDisconnect(NetworkConnection conn)
     {
-        base.OnClientDisconnect(conn);
-        indZero = false;
+        base.OnServerDisconnect(conn);
+        if (indZero == true)
+        {
+            indZero = false;
+        }
         p.health = 3;
     }
     void blabla()
