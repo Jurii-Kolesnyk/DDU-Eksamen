@@ -38,6 +38,10 @@ public class HeadDetect : NetworkBehaviour
         {
             n.hasEntered = false;
         }
+        if (ourp.health < 1)
+        {
+            n.indZero = false;
+        }
 
     }
 
