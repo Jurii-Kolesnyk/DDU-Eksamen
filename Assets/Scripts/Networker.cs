@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using Mirror;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 // Custom NetworkManager that simply assigns the correct racket positions when
@@ -20,6 +21,7 @@ public class Networker : NetworkManager
     public bool hasEntered = true;
     public bool indZero = false;
     public bool isFound = true;
+    public bool endGame = false;
 
 
     public override void OnServerAddPlayer(NetworkConnection conn)
@@ -41,6 +43,19 @@ public class Networker : NetworkManager
         }
         NetworkServer.AddPlayerForConnection(conn, player);
         blabla();
+    }
+
+    void Update()
+    {
+        if (endGame == true)
+        {
+            endGame = false;
+            GameObject endScreen = Instantiate(spawnPrefabs.Find(prefab => prefab.name == "Canvas 1"), SpawnPointTimer.position, SpawnPointTimer.rotation);
+            NetworkServer.Spawn(endScreen);
+            GameObject eSys = Instantiate(spawnPrefabs.Find(prefab => prefab.name == "EventSystem"), SpawnPointTimer.position, SpawnPointTimer.rotation);
+            NetworkServer.Spawn(eSys, endScreen);
+        }
+        else return;
     }
 
     public override void OnServerDisconnect(NetworkConnection conn)
@@ -70,5 +85,10 @@ public class Networker : NetworkManager
             h.playerSync = 2;
             NetworkServer.Spawn(health, player);
         }
+    }
+
+    public void endManager()
+    {
+        NetworkManager.Shutdown();
     }
 }

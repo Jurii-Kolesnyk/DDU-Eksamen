@@ -979,7 +979,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 707005926}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.96, y: 5.73, z: -37.471394}
+  m_LocalPosition: {x: -9.96, y: 5.73, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1377,6 +1377,7 @@ MonoBehaviour:
   - {fileID: 4104038117640748599, guid: a1f9e792ebb3d3e438c9b60dd5c28b57, type: 3}
   - {fileID: 4315721078865006006, guid: 87b0f9b121839dc448f6af99ae91bf11, type: 3}
   - {fileID: 8831206801015186109, guid: 3f0f4efd0fce5674ebfae694b268276a, type: 3}
+  - {fileID: 6904356661202246354, guid: 816cb6d0384f169448d3d5d444a1d73b, type: 3}
   leftRacketSpawn: {fileID: 2043073608}
   rightRacketSpawn: {fileID: 1598394101}
   player: {fileID: 0}
@@ -1387,6 +1388,8 @@ MonoBehaviour:
   h12: {fileID: 607221385}
   hasEntered: 1
   indZero: 0
+  isFound: 1
+  endGame: 0
 --- !u!222 &902927375
 CanvasRenderer:
   m_ObjectHideFlags: 0

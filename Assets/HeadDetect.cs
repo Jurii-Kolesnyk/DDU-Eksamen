@@ -38,11 +38,17 @@ public class HeadDetect : NetworkBehaviour
         {
             n.hasEntered = false;
         }
-        if (ourp.health < 1)
+        if (ourp.health < 1 && n.indZero == true)
         {
             n.indZero = false;
+            Invoke("changeEnd", 2);
         }
 
+    }
+
+    void changeEnd()
+    {
+        n.endGame = true;
     }
 
     [Client]

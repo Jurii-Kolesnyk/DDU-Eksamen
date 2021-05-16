@@ -8860,7 +8860,7 @@ MonoBehaviour:
   serverTickRate: 30
   serverBatching: 0
   serverBatchInterval: 0
-  offlineScene: 
+  offlineScene: Assets/Scenes/EndScreen.unity
   onlineScene: 
   transport: {fileID: 1688764464}
   networkAddress: localhost
@@ -8875,6 +8875,8 @@ MonoBehaviour:
   - {fileID: 4104038117640748599, guid: a1f9e792ebb3d3e438c9b60dd5c28b57, type: 3}
   - {fileID: 4315721078865006006, guid: 87b0f9b121839dc448f6af99ae91bf11, type: 3}
   - {fileID: 8831206801015186109, guid: 3f0f4efd0fce5674ebfae694b268276a, type: 3}
+  - {fileID: 6904356661202246354, guid: 816cb6d0384f169448d3d5d444a1d73b, type: 3}
+  - {fileID: 4346275245920783325, guid: 7410f05dd515bce44ba3877ed87e140a, type: 3}
   leftRacketSpawn: {fileID: 1681096189}
   rightRacketSpawn: {fileID: 1662429072}
   player: {fileID: 0}
@@ -8886,6 +8888,7 @@ MonoBehaviour:
   hasEntered: 1
   indZero: 0
   isFound: 1
+  endGame: 0
 --- !u!114 &1688764466
 MonoBehaviour:
   m_ObjectHideFlags: 0
