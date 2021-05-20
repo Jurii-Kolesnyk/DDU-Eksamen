@@ -28,8 +28,6 @@ public class countdownTimer : NetworkBehaviour
     {
         if (n.hasEntered == false)
         {
-
-
             currentTime -= 1 * Time.deltaTime;
             countdownText.text = currentTime.ToString("0");
 

@@ -12,16 +12,9 @@ public class Player : NetworkBehaviour
     public LayerMask Mask;
     private float _startJumpPower;
     private float _startSpeed;
-    //--------------------------------------------------------------------------------------------------
-    // public GameObject h;
-    // public HP HP;
-    //--------------------------------------------------------------------------------------------------
     GameObject manager;
     Networker n;
     HeadDetect child;
-
-    // [SyncVar]
-    // public bool healthLoss = false;
 
     [SyncVar]
     public int type;
@@ -41,7 +34,7 @@ public class Player : NetworkBehaviour
         n = manager.GetComponent<Networker>();
     }
 
-    //Update is called once per frame
+
     void FixedUpdate()
     {
         // Dette styrer movement a og d på spilleren 
@@ -64,14 +57,6 @@ public class Player : NetworkBehaviour
                 movement.x = Speed;
             }
 
-            // if (Input.GetKeyDown(KeyCode.Space) && _isGrounded == true)
-            // {
-            //     RB.AddForce(new Vector2(0, JumpPower));
-            //     _isGrounded = false;
-            // }
-
-            // != betyder ikke = 0 
-
             if (movement.x >= 0)
             {
                 SR.flipX = true;
@@ -82,11 +67,6 @@ public class Player : NetworkBehaviour
             }
 
             RB.velocity = movement;
-
-            // if (child.collEnt == true)
-            // {
-            //     child.ourp.respawnEngaged();
-            // }
         }
     }
 
@@ -110,14 +90,11 @@ public class Player : NetworkBehaviour
     public void respawnEngaged()
     {
         Respawn();
-        // child.collEnt = true;
     }
     [ClientRpc]
     public void Respawn()
     {
 
-        //Debug.Log("death - " + child.ourp.type + " - with - " + child.ourp.health);
-        // child.healthLoss = true;
         Debug.Log("status on player - " + child.ourp.type + " - of boolean - " + child.healthLoss);
         if (child.healthLoss == true)
         {
@@ -127,13 +104,13 @@ public class Player : NetworkBehaviour
 
             if (child.ourp.type == 1)
             {
-                child.ourp.transform.position = n.leftRacketSpawn.position;
+                child.ourp.transform.position = n.Spawn1.position;
                 child.ourp.health -= 1;
                 child.collEnt = false;
             }
             else
             {
-                child.ourp.transform.position = n.rightRacketSpawn.position;
+                child.ourp.transform.position = n.Spawn2.position;
                 child.ourp.health -= 1;
                 child.collEnt = false;
             }
@@ -142,3 +119,4 @@ public class Player : NetworkBehaviour
     }
 
 }
+

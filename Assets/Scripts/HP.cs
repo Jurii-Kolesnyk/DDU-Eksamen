@@ -22,9 +22,7 @@ public class HP : NetworkBehaviour
     [SyncVar]
     public int playerSync;
     public bool hasFound = false;
-
     GameObject manager;
-
     Networker n;
 
     void Start()
@@ -54,23 +52,13 @@ public class HP : NetworkBehaviour
                     hasFound = true;
                     Debug.Log("bool got activated - " + hasFound);
                     Debug.Log("bool got true at player number - " + p.type);
-                    //children = player.GetComponentInChildren<HeadDetect>();
-                    //Debug.Log("the type of children - " + p.type);
                     p = Player.GetComponent<Player>();
                     numOfHearts = p.health;
-                    //--------------------------------------------------------------------------------------------------
-                    // p.h = gameObject;
-                    // p.HP = p.h.GetComponent<HP>();
-                    //--------------------------------------------------------------------------------------------------
                 }
-                //else return;
+
             }
 
         }
-        // if (health > numOfHearts)
-        // {
-        //     health = numOfHearts;
-        // }
         if (hasFound && playerSync == p1.type)
         {
             health = p1.health;
@@ -89,7 +77,6 @@ public class HP : NetworkBehaviour
             else
             {
                 hearts[i].sprite = emptyHeart;
-                //Debug.Log("lost live on player " + p.type);
             }
             if (i < numOfHearts)
             {

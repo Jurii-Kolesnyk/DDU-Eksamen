@@ -3,15 +3,11 @@ using Mirror;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-
-// Custom NetworkManager that simply assigns the correct racket positions when
-// spawning players. The built in RoundRobin spawn method wouldn't work after
-// someone reconnects (both players would be on the same side).
 [AddComponentMenu("")]
 public class Networker : NetworkManager
 {
-    public Transform leftRacketSpawn;
-    public Transform rightRacketSpawn;
+    public Transform Spawn1;
+    public Transform Spawn2;
     public GameObject player;
     public Player p;
     public Transform SpawnPointTimer;
@@ -27,10 +23,9 @@ public class Networker : NetworkManager
     public override void OnServerAddPlayer(NetworkConnection conn)
     {
         // add player at correct spawn position
-        start = numPlayers == 0 ? leftRacketSpawn : rightRacketSpawn;
+        start = numPlayers == 0 ? Spawn1 : Spawn2;
         player = Instantiate(playerPrefab, start.position, start.rotation);
         p = player.GetComponent<Player>();
-        //HeadDetect c = p.GetComponentInChildren<HeadDetect>().GetComponent<HeadDetect>();
         if (numPlayers > 0)
         {
             p.type = 2;
@@ -65,7 +60,7 @@ public class Networker : NetworkManager
         {
             indZero = false;
         }
-        p.health = 3;
+        //p.health = 3;
     }
     void blabla()
     {
